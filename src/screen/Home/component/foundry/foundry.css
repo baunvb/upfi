@@ -1,0 +1,28 @@
+.foundry-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.foundry-card .label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #DAC08F;
+}
+.foundry-card .value {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 61px;
+    color: #B152D5;
+
+}
+.foundry-card .label-white {
+    display: block;
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}

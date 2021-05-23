@@ -1,0 +1,50 @@
+.mint-redeem {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    max-width: 440px;
+}
+.mint-redeem-tabs {
+    margin-bottom: 18px;
+}
+.mint-redeem-tab {
+    margin-right: 16px;
+    padding: 12px 0;
+    width: 120px;
+    outline: none;
+    border: 2px solid #8F929A;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #8F929A;
+    cursor: pointer;
+    
+}
+.mint-redeem-tab:hover {
+    background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);
+
+}
+.mint-redeem-active {
+    background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);
+    border: 2px tr;
+    color: #fff;
+    background-repeat: no-repeat;
+}
+.mint-redeem-button-submit {
+    background: rgb(64, 68, 79);
+    border-radius: 10px;
+    margin: 30px auto;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 0;
+    color: #FFFFFF;
+    cursor: pointer;
+}

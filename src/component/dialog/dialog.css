@@ -1,0 +1,27 @@
+.dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.dialog {
+    background-color: rgb(13, 16, 31);
+    padding: 20px 25px;
+    border-radius: 20px;
+}
+.dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dialog-header > span {
+    flex: 1
+}
+.dialog-close {
+    color: #fff!important;
+}
+.MuiPaper-rounded {
+    border-radius: 20px!important;
+}
+.MuiPaper-root {
+    background: transparent !important
+}

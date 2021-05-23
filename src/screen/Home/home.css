@@ -1,0 +1,11 @@
+.home {
+    margin: 24px;
+}
+.home-grid {
+    margin-top: 24px;
+    justify-content: space-between;
+    display: flex;
+}
+.home-grid > div {
+    width: 49%;
+}

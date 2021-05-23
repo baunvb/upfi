@@ -1,0 +1,28 @@
+.farm-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.farm-card .label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #DAC08F;
+}
+.farm-card .value {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 61px;
+    color: #20E71C;
+
+}
+.farm-card .label-white {
+    display: block;
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}

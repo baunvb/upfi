@@ -1,0 +1,22 @@
+.mint {
+
+}
+.mint-header {
+    position: relative;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.mint-setting {
+    position: absolute;
+    right: 0;
+}
+.icon-swap {
+    margin: 16px auto;
+
+}
+.mint-swap {
+    text-align: center;
+}

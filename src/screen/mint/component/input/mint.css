@@ -1,0 +1,67 @@
+.mint-item {
+    border: 1px solid #8F929A;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 16px;
+}
+.mint-item-top, .mint-item-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mint-item-bottom{
+    margin-top: 16px;
+}
+.mint-item-top > span:first-child {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #DAC08F;
+}
+.mint-item-top > span:nth-child(2) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #8F929A;
+}
+.mint-icon {
+    height: 18px;
+    width: auto;
+    margin-right: 4px;
+}
+.mint-tokenname {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    color: #8F929A;
+}
+.mint-btn-max {
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FF7900;
+    cursor: pointer;
+    background: transparent;
+    margin: 0 16px;
+}
+.mint-token {
+    display: flex;
+    align-items: center;
+}
+.mint-item-input {
+    flex: 1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #15EA11;
+    outline: none;
+    border: none;
+    background: transparent;
+}

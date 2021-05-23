@@ -1,0 +1,24 @@
+.tvl {
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+.tvl-title {
+    display: block;
+    margin-bottom: 18px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #DAC08F;
+}
+.tvl-value {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 61px;
+    color: #F6AA16;
+}
