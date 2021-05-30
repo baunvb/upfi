@@ -1,7 +1,8 @@
 .header {
     padding: 24px;
     background: transparent;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 .header-connect {
     background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);
@@ -17,4 +18,57 @@
 }
 .header-connect:hover {
     background: linear-gradient(93.87deg, #f65617 -5.07%, #c462ee 98.15%);
+}
+.header-wallet {
+    cursor: pointer;
+    width: fit-content;
+    padding: 8px 16px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.header-wallet-address {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 16px;
+    color: #FFFFFF;
+}
+.header-wallet-icon {
+    background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+}
+.header-detail-account {
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: rgb(108, 114, 132);
+    width: 400px;
+    padding: 20px;
+    border: 1px solid rgb(44, 47, 60);
+    border-radius: 20px;
+    position: relative;
+}
+.header-btn-change {
+    color: #fff;
+    height: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+}
+.header-wallet-copy {
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.header-wallet-icon-action {
+    margin-right: 4px;
+    margin-bottom: -3px;
 }

@@ -1,5 +1,7 @@
 import Home from "../screen/Home/Home"
 import { CurrencyExchange, HouseFill, CurrencyDollar, FileTextFill, Coin } from 'react-bootstrap-icons';
+import { FaCubes, FaExchangeAlt, FaExternalLinkAlt } from 'react-icons/fa';
+
 import MintAndRedeem from "../screen/mint/MintAndRedeem";
 import Farms from "../screen/farm/Farms";
 import Foundry from "../screen/foundry/Foundry";
@@ -17,13 +19,13 @@ export const Routers = [
         path: "/mint-redeem",
         name: "MINT / REDEEM",
         component: MintAndRedeem,
-        icon: <CurrencyExchange size={SIZE}/>
+        icon: <FaExchangeAlt size={SIZE}/>
     },
     {
         path: "/farms",
         name: "Farms",
         component: Farms,
-        icon: <Coin size={SIZE}/>
+        icon: <FaCubes size={SIZE}/>
     },
     {
         path: "/foundry",
@@ -39,8 +41,11 @@ export const Routers = [
     },
     {
         path: "/document",
+        redirect: true,
+        to: "https://google.com",
         name: "Document",
         component: null,
-        icon: <FileTextFill size={SIZE}/>
+        icon: <FileTextFill size={SIZE}/>,
+        subIcon: <FaExternalLinkAlt size={10} />
     },
 ]

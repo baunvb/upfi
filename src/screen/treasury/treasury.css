@@ -1,0 +1,63 @@
+.treasury {
+    margin: 24px;
+}
+.treasury-header {
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 61px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+.treasury-content {
+    background: #131A35;
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 12px 24px;
+}
+.treasury-subheader {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #DAC08F;
+}
+.treasury-text {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+.treasury-li {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.treasury-row {
+    display: flex;
+    align-items: flex-start;
+}
+.treasury-col {
+    width: 50%;
+}
+.treasury-table {
+    border-spacing: 0;
+    width: 100%;
+}
+.treasury-table > thead {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 6px;
+}
+.treasury-table > tbody {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}

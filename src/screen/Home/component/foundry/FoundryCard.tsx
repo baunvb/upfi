@@ -31,7 +31,7 @@ export default function FoundryCard(props: any) {
 
                 <span className="value">
                     <Countdown 
-                        date = {Date.now() + COUNT_DOWN_TIME}
+                        date = {new Date(2021, 5, 15)}
                         renderer={CountDownComponent}
                     />
                 </span>

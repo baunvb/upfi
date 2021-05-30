@@ -4,6 +4,8 @@ import Logo from "../../assets/images/logo.png"
 import { Routers } from '../../router/Routers'
 import { useLocation, NavLink } from 'react-router-dom'
 import { Github, Twitter, Telegram, Facebook } from 'react-bootstrap-icons';
+import { FaTelegram } from 'react-icons/fa';
+
 
 export default function (props: any) {
     const location = useLocation()
@@ -11,16 +13,29 @@ export default function (props: any) {
     const SidebarItem = (props: any) => {
         var classes = "sidebar-item "
         if (props.isActive) classes += "sidebar-item-active"
-        return (
-            <NavLink
+        if (props.redirect) {
+            return <a
                 className={classes}
-                to={props.path}
+                href={props.to}
+                target="_blank"
             >
                 <span className="sidebar-item-logo">{props.icon}</span>
-                
                 <span>{props.name}</span>
-            </NavLink>
-        )
+                <span style={{ marginLeft: "8px", marginTop: "-4px" }}>{props.subIcon}</span>
+            </a>
+        } else {
+            return (
+                <NavLink
+                    className={classes}
+                    to={props.path}
+                >
+                    <span className="sidebar-item-logo">{props.icon}</span>
+                    <span>{props.name}</span>
+                    <span style={{ marginLeft: "8px", marginTop: "-4px" }}>{props.subIcon}</span>
+                </NavLink>
+            )
+        }
+
     }
 
     const isActive = (path: string) => {
@@ -41,9 +56,7 @@ export default function (props: any) {
                     Routers.map((e, index) => {
                         return (
                             <SidebarItem
-                                name={e.name}
-                                path={e.path}
-                                icon={e.icon}
+                                {...e}
                                 isActive={isActive(e.path)}
                             />
                         )
@@ -52,9 +65,10 @@ export default function (props: any) {
             </div>
             <div className="sidebar-footer">
                 <a><span>M</span></a>
-                <a><Github size={20}/></a>
-                <a><Facebook size={20}/></a>
-                <a><Twitter size={20}/></a>
+                <a><Facebook size={20} /></a>
+                <a><FaTelegram size={20} /></a>
+                <a><Github size={20} /></a>
+                <a><Twitter size={20} /></a>
 
             </div>
         </div>

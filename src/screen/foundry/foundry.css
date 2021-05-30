@@ -1,0 +1,26 @@
+.foundry {
+    width: 70%;
+    margin: auto;
+}
+.foundry-header {
+    display: flex;
+    align-items: center;
+}
+.foundry-header img {
+    width: 90px;
+    height: 90px;
+    margin-right: 24px;
+}
+.foundry-header span:first-child {
+    display: block;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 61px;
+    color: #fff;
+}
+.foundry-header span:nth-child(2) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C9CBD1;
+}

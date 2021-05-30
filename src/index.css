@@ -5,6 +5,7 @@ body {
 .btn-active {
   background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);
   outline: none;
+  cursor: pointer;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
