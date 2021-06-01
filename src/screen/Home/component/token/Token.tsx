@@ -12,7 +12,7 @@ export default function (props: any) {
                 </div>
                 <div>
                     <span className="price-label">Price: </span>
-                    <span className="price">{props.price}</span>
+                    <span className="price">$ {props.price}</span>
                 </div>
             </div>
             <div>

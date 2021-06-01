@@ -12,7 +12,7 @@
     background: #131A35;
     opacity: 0.8;
     border-radius: 10px;
-    padding: 12px 24px;
+    padding: 12px 24px 24px 12px;
 }
 .treasury-subheader {
     margin-bottom: 20px;
@@ -44,8 +44,10 @@
     width: 50%;
 }
 .treasury-table {
-    border-spacing: 0;
+    border-spacing: 8px 4px;
     width: 100%;
+    display: block;
+    overflow-x: auto;
 }
 .treasury-table > thead {
     font-weight: 600;
@@ -69,4 +71,16 @@
 }
 .treasury-tx-external-link {
     margin-left: 8px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+    .treasury-col:nth-child(2) {
+        text-align: right;
+    }
+    .treasury-header {
+        font-size: 20px;
+    }
+
 }

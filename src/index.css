@@ -1,6 +1,10 @@
 body {
   margin: 0;
-  font-family: "Inter"
+  font-family: "Inter";
+  box-sizing: border-box;
+}
+div {
+  box-sizing: border-box;
 }
 .btn-active {
   background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);

@@ -26,7 +26,11 @@ export default function Layout(props: any) {
           display: !isMobile ? "block" : openSidebar ? "block" : "none"
         }}
       >
-        <Sidebar />
+        <Sidebar 
+          onItemClick={() => {
+            setOpen(false)
+          }}
+        />
       </div>
       <div className="layout-content">
         <span className="layout-sibar-icon-menu"

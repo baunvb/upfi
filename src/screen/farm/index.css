@@ -40,12 +40,19 @@
 .farm-item-token-logo-bg:nth-child(2) { 
     margin-left: -20px;
 }
+.farm-item-tokenname {
+    display: flex;
+}
 .farm-item-header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+
 }
+
 .farm-item-value {
     margin-top: 4px;
     font-weight: 600;
@@ -148,9 +155,11 @@
 .farm-item-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .farm-item-content .farm-item-detail-card {
     width: 49%;
+    margin-top: 12px;
 }
 .farm-item-detail-divider {
     height: 1px;
@@ -159,7 +168,7 @@
     margin-bottom: 24px;
 }
 .farm-item-detail-liquidity {
-    margin-bottom: 12px;
+    margin-bottom: 0px;
 }
 .farm-item-detail-liquidity > span{
     margin-right: 40px;
@@ -198,4 +207,37 @@
 }
 .item-farm-avaiable-balance {
     font-size: 16px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+    .farm-item-tokenname .name {
+        flex: 1;
+        text-align: right;
+    }
+    .farm-item-tokenname {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .farm-item-expander {
+        display: none;
+    }
+    .farm-item-content .farm-item-detail-card {
+        width: 100%;
+    }
+    .farm-item-detail-stakeamount {
+        width: 0px;
+    }
+    .farm-item-logo {
+        margin-right: 4px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
 }

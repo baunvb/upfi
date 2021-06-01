@@ -24,3 +24,24 @@
     line-height: 24px;
     color: #C9CBD1;
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+    .foundry {
+        width: 90%;
+    }
+    .foundry-header span:first-child {
+        font-size: 21px;
+        line-height: 25px;
+
+    }
+    .foundry-header span:nth-child(2) {
+        font-size: 14px;
+        line-height: 12px;
+
+    }
+    .foundry-header img {
+        width: 60px;
+        height: 60px;
+    }
+  }

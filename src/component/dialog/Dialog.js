@@ -9,7 +9,7 @@ import "./dialog.css"
 export default function DialogComponent(props) {
 
     return (
-        <Dialog onClose={() => props.onClose()} open={props.open}>
+        <Dialog fullWidth={true} onClose={() => props.onClose()} open={props.open}>
             <div className="dialog">
                 <div className="dialog-header">
                     <span className="dialog-title">{props.title}</span>

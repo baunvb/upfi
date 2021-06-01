@@ -6,6 +6,8 @@
 .layout-sidebar {
     width: 280px;
     height: 100vh;
+    z-index: 1;
+    overflow-y: auto;
 }
 .layout-content {
     box-sizing: border-box;
@@ -20,6 +22,7 @@
 .layout-sibar-icon-menu {
     color: #fff;
     position: absolute;
+    z-index: 2;
     left: 24px;
     top: 24px;
     display: none;

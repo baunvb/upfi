@@ -26,3 +26,10 @@
     line-height: 29px;
     color: #FFFFFF;
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+    .farm-card .value {
+        font-size: 30px;
+    }
+}

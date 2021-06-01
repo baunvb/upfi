@@ -7,7 +7,7 @@ import "../index.css"
 
 import DialogComponent from '../../../component/dialog/Dialog'
 
-const FarmItemDetail:React.FC<{}> = () => {
+const FarmItemDetail: React.FC<{}> = () => {
     const [open, setOpenStakeDialog] = useState(false)
     const [stakeAmount, setStakeAmount] = useState(0)
     return (
@@ -36,7 +36,6 @@ const FarmItemDetail:React.FC<{}> = () => {
                                 <img className="farm-item-dialog-token-logo" alt="" src={Logo} />
                             </div>
                         </span>
-                        <span>STEEL/IRON</span>
 
                     </div>
                     <button className="farm-item-btn-approve btn-active">Approve</button>
@@ -76,27 +75,29 @@ const FarmItemDetail:React.FC<{}> = () => {
     )
 }
 
- const FarmItem:React.FC<{}> = () => {
+const FarmItem: React.FC<{}> = () => {
     const [isExpander, setExpander] = useState(true)
     return (
         <Card>
             <div className="farm-item">
-                <div className="farm-item-header">
-                    <div>
-                        <div style={{ display: "flex" }}>
-                            <span className="farm-item-logo">
-                                <div className="farm-item-token-logo-bg">
-                                    <img className="farm-item-token-logo" alt="" src={Logo} />
-                                </div>
-                                <div className="farm-item-token-logo-bg">
-                                    <img className="farm-item-token-logo" alt="" src={Logo} />
-                                </div>
-                            </span>
-                            <span>
-                                <span className="farm-item-title">UTK-UTK</span>
-                                <span className="farm-item-earn">Earn USDT</span>
-                            </span>
-                        </div>
+                <div className="farm-item-header"
+                    onClick={() => {
+                        setExpander(e => !e)
+                    }}
+                >
+                    <div className="farm-item-tokenname">
+                        <span className="farm-item-logo">
+                            <div className="farm-item-token-logo-bg">
+                                <img className="farm-item-token-logo" alt="" src={Logo} />
+                            </div>
+                            <div className="farm-item-token-logo-bg">
+                                <img className="farm-item-token-logo" alt="" src={Logo} />
+                            </div>
+                        </span>
+                        <span className="name">
+                            <span className="farm-item-title">UTK-UTK</span>
+                            <span className="farm-item-earn">Earn USDT</span>
+                        </span>
                     </div>
                     <div>
                         <span className="farm-item-label">APR</span>
@@ -105,11 +106,13 @@ const FarmItemDetail:React.FC<{}> = () => {
 
                     <div>
                         <span className="farm-item-label">Total Value Locked</span>
-                        <span className="farm-item-value">{formatCurrency(123456879)}%</span>
+                        <span className="farm-item-value">${formatCurrency(123456879)}</span>
                     </div>
 
                     <div className="farm-item-expander"
-                        onClick={() => setExpander(e => !e)}
+                        onClick={(event) => {
+                            
+                        }}
                     >
                         <span>Detail</span>
                         {
