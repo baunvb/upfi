@@ -1,16 +1,19 @@
 import React from 'react'
 import './sidebar.css'
 import Logo from "../../assets/images/logo.png"
-import { Routers } from '../../router/Routers'
+import { route, Routers } from '../../router/Routers'
 import { useLocation, NavLink } from 'react-router-dom'
 import { Github, Twitter, Telegram, Facebook } from 'react-bootstrap-icons';
 import { FaTelegram } from 'react-icons/fa';
 
+interface sidebar extends route {
+    isActive: boolean
+}
 
-export default function (props: any) {
+export default function Sidebar(props: any) {
     const location = useLocation()
 
-    const SidebarItem = (props: any) => {
+    const SidebarItem = (props: sidebar) => {
         var classes = "sidebar-item "
         if (props.isActive) classes += "sidebar-item-active"
         if (props.redirect) {

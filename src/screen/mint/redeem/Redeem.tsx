@@ -8,7 +8,7 @@ import IcPlus from '../../../assets/images/ic_plus.png'
 import IcResult from '../../../assets/images/ic_result.png'
 import Fee from '../component/fee/Fee';
 
-export default function Redeem(props: any) {
+export default function Redeem() {
     const [valueBusd, setBusd] = useState(0)
 
     return (

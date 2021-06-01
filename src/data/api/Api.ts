@@ -1,8 +1,9 @@
 import Web3 from 'web3'
 import { COINGECKO_API, tokenCgkIdMap } from '../../utils/Constants';
+declare const window: any;
 
 //connect wallet api
-export const connectMetaMaskWallet = async (ethereum) => {
+export const connectMetaMaskWallet = async (ethereum: any) => {
     const account = await getWalletAddress();
     if(account.length == 0) {
         return await ethereum.request({ method: 'eth_requestAccounts' });
@@ -28,7 +29,7 @@ export const fetchTokenPriceCoingecko = async () => {
     let cgkIds = Object.values(tokenCgkIdMap).join(",");
 	let prices = await (await fetch(`${COINGECKO_API}?vs_currencies=usd&include_market_cap=true&ids=${cgkIds}`)).json()
 	console.log("Coinecko price", prices)
-	const priceMap = {}
+	const priceMap: any = {}
 	for (let symbol of Object.keys(tokenCgkIdMap)) {
 		let cgkId = tokenCgkIdMap[symbol];
 		if (prices[cgkId]) {

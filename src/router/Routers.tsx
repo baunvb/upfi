@@ -1,3 +1,4 @@
+import React from 'react'
 import Home from "../screen/Home/Home"
 import { CurrencyExchange, HouseFill, CurrencyDollar, FileTextFill, Coin } from 'react-bootstrap-icons';
 import { FaCubes, FaExchangeAlt, FaExternalLinkAlt } from 'react-icons/fa';
@@ -7,13 +8,23 @@ import Farms from "../screen/farm/Farms";
 import Foundry from "../screen/foundry/Foundry";
 import Treasury from "../screen/treasury/Treasury";
 const SIZE = 20;
-export const Routers = [
+
+export interface route {
+    path: string,
+    name: string,
+    component: any,
+    icon: JSX.Element,
+    redirect?: boolean,
+    to?: string,
+    subIcon?: JSX.Element,
+}
+
+export const Routers: Array<route> = [
     {
         path: "/",
         name: "Home",
         component: Home,
-        icon: <HouseFill size={SIZE}/>
-
+        icon: <HouseFill size={SIZE}/> 
     },
     {
         path: "/mint-redeem",
@@ -46,6 +57,6 @@ export const Routers = [
         name: "Document",
         component: null,
         icon: <FileTextFill size={SIZE}/>,
-        subIcon: <FaExternalLinkAlt size={10} />
-    },
+        subIcon: <FaExternalLinkAlt size={10}/>
+    }
 ]

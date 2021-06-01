@@ -1,7 +1,7 @@
 import React from 'react'
 import "./foundry.css"
 import Logo from "../../assets/images/logo_round.png"
-export default function Foundry(props) {
+export default function Foundry(props: any) {
     return (
         <div className="foundry">
             <div className="foundry-header">

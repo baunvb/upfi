@@ -8,7 +8,7 @@ import IcPlus from '../../../assets/images/ic_plus.png'
 import IcResult from '../../../assets/images/ic_result.png'
 import Fee from '../component/fee/Fee';
 
-export default function Mint(props: any) {
+export default function Mint() {
     const [valueBusd, setBusd] = useState(0)
     const check = () => {
         return valueBusd > 0

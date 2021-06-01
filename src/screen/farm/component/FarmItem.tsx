@@ -7,7 +7,7 @@ import "../index.css"
 
 import DialogComponent from '../../../component/dialog/Dialog'
 
-function FarmItemDetail(props) {
+const FarmItemDetail:React.FC<{}> = () => {
     const [open, setOpenStakeDialog] = useState(false)
     const [stakeAmount, setStakeAmount] = useState(0)
     return (
@@ -25,7 +25,7 @@ function FarmItemDetail(props) {
                             className="farm-item-detail-stakeamount"
                             type="number"
                             placeholder="0.0"
-                            onChange={(e) => setStakeAmount(e.target.value)}
+                            onChange={(e: any) => setStakeAmount(e.target.value)}
                             value={stakeAmount}
                         />
                         <span className="farm-item-logo">
@@ -76,7 +76,7 @@ function FarmItemDetail(props) {
     )
 }
 
-export default function FarmItem(props) {
+ const FarmItem:React.FC<{}> = () => {
     const [isExpander, setExpander] = useState(true)
     return (
         <Card>
@@ -127,3 +127,5 @@ export default function FarmItem(props) {
         </Card>
     )
 }
+
+export default FarmItem

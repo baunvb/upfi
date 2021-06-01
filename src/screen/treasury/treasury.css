@@ -61,3 +61,12 @@
     line-height: 19px;
     color: #FFFFFF;
 }
+.treasury-table-tx {
+    color: #fff;
+}
+.treasury-table-tx:hover {
+    text-decoration: underline;
+}
+.treasury-tx-external-link {
+    margin-left: 8px;
+}

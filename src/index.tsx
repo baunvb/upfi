@@ -9,7 +9,6 @@ import { createStore, applyMiddleware } from "redux";
 import reportWebVitals from './reportWebVitals';
 import AppReducer from './data/reducer';
 import rootSaga from './data/saga';
-console.disableYellowBox = true;
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(AppReducer, applyMiddleware(sagaMiddleware));

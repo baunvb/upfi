@@ -1,9 +1,25 @@
 import React, { useEffect, useMemo } from 'react'
 import Contracts from "../../contracts/Contracts"
 import "./treasury.css"
-import { useTable } from 'react-table'
+import { useTable, Column } from 'react-table'
+import { formatCurrency } from '../../utils/Util'
+import { FaCopy, FaExternalLinkAlt } from 'react-icons/fa';
 
-function History({ columns, data }) {
+type header =  {
+    Header: string,
+    accessor: string,
+    Cell?: any
+}
+
+type transaction = {
+    timestamp: string,
+    capital: number,
+    profit: number,
+    reinvested: number,
+    tx: string
+}
+
+const History: React.FC<{ columns: Array<Column<transaction>>, data: Array<transaction> }> = ({ columns, data }) => {
     const {
         getTableProps,
         getTableBodyProps,
@@ -12,25 +28,25 @@ function History({ columns, data }) {
         prepareRow,
     } = useTable({
         columns,
-        data,
+        data
     })
     return (
         <table {...getTableProps()} className="treasury-table">
             <thead>
-                {headerGroups.map(headerGroup => (
+                {headerGroups.map((headerGroup: any) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map(column => (
+                        {headerGroup.headers.map((column: any) => (
                             <th {...column.getHeaderProps()}>{column.render('Header')}</th>
                         ))}
                     </tr>
                 ))}
             </thead>
             <tbody {...getTableBodyProps()}>
-                {rows.map((row, i) => {
+                {rows.map((row: any, i: number) => {
                     prepareRow(row)
                     return (
                         <tr {...row.getRowProps()}>
-                            {row.cells.map(cell => {
+                            {row.cells.map((cell: any) => {
                                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                             })}
                         </tr>
@@ -41,9 +57,9 @@ function History({ columns, data }) {
     )
 }
 
-export default function Treasury(props) {
+export default function Treasury(props: any) {
 
-    const columns = [
+    const columns: Array<Column<transaction>> = [
         {
             Header: 'Timestamp',
             accessor: 'timestamp',
@@ -51,66 +67,74 @@ export default function Treasury(props) {
         {
             Header: 'Capital',
             accessor: 'capital',
+            Cell: (row: any) => "$" + formatCurrency(row.value)
         },
         {
             Header: 'Profit',
             accessor: 'profit',
+            Cell: (row: any) => "$" + formatCurrency(row.value)
+
         },
         {
             Header: 'Reinvested',
             accessor: 'reinvested',
+            Cell: (row: any) => "$" + formatCurrency(row.value)
         },
         {
             Header: "Tx",
-            accessor: "tx"
+            accessor: "tx",
+            Cell: (row: any) => <a className="treasury-table-tx" href={"https://bscscan.com/tx/" + row.value} target="_blank">
+                <span>{row.value}</span>
+                <span className="treasury-tx-external-link">
+                    <FaExternalLinkAlt size={10}/>
+                </span>
+            </a>
         }
     ]
-    const data = [
+    const data: Array<transaction> = [
         {
             timestamp: "07/05/2021 16:56:54",
-            capital: "$12,162,324",
-            profit: "$9,433",
-            reinvested: "$12,162,324",
-            tx: "0xf95074...52fac50f "
+            capital: 12345,
+            profit: 9.1125,
+            reinvested: 12365478,
+            tx: "0xf9507452fac50f52fac50f52fac50f52fac50f"
         },
         {
             timestamp: "07/05/2021 16:56:54",
-            capital: "$12,162,324",
-            profit: "$9,433",
-            reinvested: "$12,162,324",
-            tx: "0xf95074...52fac50f "
+            capital: 12345,
+            profit: 9.1125,
+            reinvested: 12365478,
+            tx: "0xf9507452fac50f52fac50f52fac50f52fac50f"
         },
         {
             timestamp: "07/05/2021 16:56:54",
-            capital: "$12,162,324",
-            profit: "$9,433",
-            reinvested: "$12,162,324",
-            tx: "0xf95074...52fac50f "
+            capital: 12345,
+            profit: 9.1125,
+            reinvested: 12365478,
+            tx: "0xf9507452fac50f52fac50f52fac50f52fac50f"
         },
         {
             timestamp: "07/05/2021 16:56:54",
-            capital: "$12,162,324",
-            profit: "$9,433",
-            reinvested: "$12,162,324",
-            tx: "0xf95074...52fac50f "
+            capital: 12345,
+            profit: 9.1125,
+            reinvested: 12365478,
+            tx: "0xf9507452fac50f52fac50f52fac50f52fac50f"
         },
         {
             timestamp: "07/05/2021 16:56:54",
-            capital: "$12,162,324",
-            profit: "$9,433",
-            reinvested: "$12,162,324",
-            tx: "0xf95074...52fac50f "
+            capital: 12345,
+            profit: 9.1125,
+            reinvested: 12365478,
+            tx: "0xf9507452fac50f52fac50f52fac50f52fac50f "
         },
         {
             timestamp: "07/05/2021 16:56:54",
-            capital: "$12,162,324",
-            profit: "$9,433",
-            reinvested: "$12,162,324",
-            tx: "0xf95074...52fac50f "
-        }
+            capital: 12345,
+            profit: 9.1125,
+            reinvested: 12365478,
+            tx: "0xf9507452fac50f52fac50f52fac50f52fac50f"
+        },
     ]
-
-
 
     useEffect(() => {
 
@@ -123,7 +147,7 @@ export default function Treasury(props) {
                     <span className="treasury-subheader">Status</span>
                     <div className="treasury-row">
                         <div className="treasury-col">
-                            <span className="treasury-text">Minting Pool Balance:    {6, 655, 233}</span>
+                            <span className="treasury-text">Minting Pool Balance:  $6.34</span>
                             <span className="treasury-text">Vault Balance: $0</span>
                             <span className="treasury-text">Profit Sharing for Foundry: 100%</span>
                             <span className="treasury-text">Above threshold: Yes</span>
