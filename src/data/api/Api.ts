@@ -4,10 +4,10 @@ declare const window: any;
 
 //connect wallet api
 export const connectMetaMaskWallet = async (ethereum: any) => {
-    const account = await getWalletAddress();
-    if(account.length == 0) {
+    // const account = await getWalletAddress();
+    // if(account.length == 0) {
         return await ethereum.request({ method: 'eth_requestAccounts' });
-    }
+    // }
 }
 
 export const disconnectMetaMaskWallet = async () => {
@@ -15,14 +15,17 @@ export const disconnectMetaMaskWallet = async () => {
 }
 
 export const getWalletAddress = async () => {
-    let web3;
-    if (window.ethereum) {
-        web3 = new Web3(window.ethereum);
-    } else if (window.web3) {
-        web3 = new Web3(window.web3.currentProvider);
-    };
-    return await web3.eth.getAccounts()
+    //get metamask address connected 
+
+    // let web3;
+    // if (window.ethereum) {
+    //     web3 = new Web3(window.ethereum);
+    // } else if (window.web3) {
+    //     web3 = new Web3(window.web3.currentProvider);
+    // };
+    // return await web3.eth.getAccounts()
 }
+
 
 //tokenPrice api
 export const fetchTokenPriceCoingecko = async () => {

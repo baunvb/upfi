@@ -1,8 +1,12 @@
-import { CONNECT_WALLET, GET_CONNECTED_WALLET_ACC } from "../action/WalletAction"
+import { CONNECT_SOL_WALLET, CONNECT_WALLET, GET_CONNECTED_WALLET_ACC } from "../action/WalletAction"
 
 const initState = {
     isWalletConnecting: false,
     myWalletAddress: "",
+
+    //sol wallet
+    isSolWalletConnecting: false,
+    solWallet: undefined
 }
 
 export const WalletReducer = (state = initState, action) => {
@@ -26,12 +30,32 @@ export const WalletReducer = (state = initState, action) => {
 
         case GET_CONNECTED_WALLET_ACC.SUCCESS:
             var address = "";
-            if(action.payload.length > 0) {
+            if (action.payload.length > 0) {
                 address = action.payload[0]
             }
             return {
                 ...state,
                 myWalletAddress: address
+            }
+
+        case CONNECT_SOL_WALLET.LOADING:
+            return {
+                ...state,
+                isSolWalletConnecting: true
+            }
+        case CONNECT_SOL_WALLET.SUCCESS:
+            const connectedWallet = action.payload;
+            console.log('Connected to wallet ' + connectedWallet.publicKey.toBase58())
+            return {
+                ...state,
+                isSolWalletConnecting: false,
+                myWalletAddress: connectedWallet.publicKey.toBase58(),
+                solWallet: connectedWallet
+            }
+        case CONNECT_SOL_WALLET.ERROR:
+            return {
+                ...state,
+                isSolWalletConnecting: false,
             }
         default:
             return state

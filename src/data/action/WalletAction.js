@@ -14,6 +14,10 @@ export const disConnectWallet = () => ({
     type: DISCONNECT_WALLET.actionName
 })
 
+
 export const getWalletAddress = () => ({
     type: GET_CONNECTED_WALLET_ACC.actionName
 })
+
+// solwallet
+export const CONNECT_SOL_WALLET = createActionSet("CONNECT_SOL_WALLET")
