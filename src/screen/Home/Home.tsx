@@ -7,6 +7,7 @@ import { PROVIDER, IRON_CONTRACTS_ADDRESS } from "../../utils/Constants"
 import TVL from './component/tvl/TVL'
 import Token from './component/token/Token'
 import Logo from "../../assets/images/logo.png"
+import UPSLogo from "../../assets/images/ups_logo.png"
 import FarmCard from './component/farm/FarmCard'
 import FoundryCard from './component/foundry/FoundryCard'
 import Contracts from '../../contracts/Contracts'
@@ -46,7 +47,7 @@ const Home: React.FC<{}> = () => {
                 <div>
                     <Token
                         tokenLogo={Logo}
-                        tokenName={"IRON"}
+                        tokenName={"UP"}
                         price={TokenPriceReducer.tokenPrice.IRON}
                         supply={formatCurrency(Math.round(ironSupply))}
                         marketCap={formatCurrency(Math.round(ironSupply * TokenPriceReducer.tokenPrice.IRON))}
@@ -54,8 +55,8 @@ const Home: React.FC<{}> = () => {
                 </div>
                 <div>
                     <Token
-                        tokenLogo={Logo}
-                        tokenName={"STEEL"}
+                        tokenLogo={UPSLogo}
+                        tokenName={"UPS"}
                         price={TokenPriceReducer.tokenPrice.STEEL}
                         supply={formatCurrency(Math.round(steelSupply))}
                         marketCap={formatCurrency(Math.round(steelSupply * TokenPriceReducer.tokenPrice.STEEL))}

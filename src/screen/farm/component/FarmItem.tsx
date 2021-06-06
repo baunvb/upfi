@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Card from '../../../component/card/Card'
 import { formatCurrency } from '../../../utils/Util'
 import Logo from "../../../assets/images/logo.png"
+import UPSLogo from "../../../assets/images/ups_logo.png"
+
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons"
 import "../index.css"
 
@@ -18,7 +20,7 @@ const FarmItemDetail: React.FC<{}> = () => {
                 onClose={() => setOpenStakeDialog(false)}
             >
                 <div>
-                    <span className="item-farm-avaiable-balance">Avaiable balance:  <span>{0} STEEL/IRON</span> </span>
+                    <span className="item-farm-avaiable-balance">Avaiable balance:  <span>{0} UP/UPS</span> </span>
 
                     <div className="farm-item-wrap-amount">
                         <input
@@ -33,7 +35,7 @@ const FarmItemDetail: React.FC<{}> = () => {
                                 <img className="farm-item-dialog-token-logo" alt="" src={Logo} />
                             </div>
                             <div className="farm-item-token-logo-bg">
-                                <img className="farm-item-dialog-token-logo" alt="" src={Logo} />
+                                <img className="farm-item-dialog-token-logo" alt="" src={UPSLogo} />
                             </div>
                         </span>
 
@@ -53,7 +55,7 @@ const FarmItemDetail: React.FC<{}> = () => {
                 <div className="farm-item-detail-card">
                     <span className="farm-item-detail-label">My share</span>
                     <span className="farm-item-detail-value">{formatCurrency(12035035.33)}</span>
-                    <span className="farm-item-detail-token">UTK/UTK</span>
+                    <span className="farm-item-detail-token">UP/UPS</span>
                     <div className="farm-item-detail-action">
                         <button className="farm-item-detail-btn-unstake">Unstake</button>
                         <button className="farm-item-detail-btn-stake btn-active"
@@ -91,11 +93,11 @@ const FarmItem: React.FC<{}> = () => {
                                 <img className="farm-item-token-logo" alt="" src={Logo} />
                             </div>
                             <div className="farm-item-token-logo-bg">
-                                <img className="farm-item-token-logo" alt="" src={Logo} />
+                                <img className="farm-item-token-logo" alt="" src={UPSLogo} />
                             </div>
                         </span>
                         <span className="name">
-                            <span className="farm-item-title">UTK-UTK</span>
+                            <span className="farm-item-title">UP-UPS</span>
                             <span className="farm-item-earn">Earn USDT</span>
                         </span>
                     </div>

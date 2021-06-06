@@ -3,6 +3,8 @@ import Card from '../../../component/card/Card'
 import { GearFill } from 'react-bootstrap-icons';
 import "./mint.css"
 import Icon from "../../../assets/images/logo.png"
+import UPSLogo from "../../../assets/images/ups_logo.png"
+import BUSDLogo from "../../../assets/images/BUSD.webp"
 import Input from '../component/input/Input';
 import IcPlus from '../../../assets/images/ic_plus.png'
 import IcResult from '../../../assets/images/ic_result.png'
@@ -27,7 +29,7 @@ export default function Redeem() {
                     value={valueBusd}
                     balance={100}
                     icon={Icon}
-                    tokenName={"BUSD"}
+                    tokenName={"UP"}
                     onMax={() => setBusd(100)}
                     onChange={(value: any) => setBusd(value)}
                 />
@@ -37,8 +39,8 @@ export default function Redeem() {
                     rate={40}
                     value={valueBusd}
                     balance={100}
-                    icon={Icon}
-                    tokenName={"BUSD"}
+                    icon={UPSLogo}
+                    tokenName={"UPS"}
                     onMax={() => setBusd(100)}
                     onChange={(value: any) => setBusd(value)}
                 />
@@ -48,7 +50,7 @@ export default function Redeem() {
                     disabled
                     value={valueBusd}
                     balance={11500}
-                    icon={Icon}
+                    icon={BUSDLogo}
                     tokenName={"BUSD"}
                     onMax={() => setBusd(100)}
                     onChange={(value: any) => setBusd(value)}
