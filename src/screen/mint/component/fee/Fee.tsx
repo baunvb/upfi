@@ -21,7 +21,7 @@ export default function Fee(props: any) {
             <span className="fee-row">
                 <span className="fee-label">{"Rate"}</span>
                 <span className="fee-value">
-                    1 UTK = {props.rate} USDC
+                    1 UP = {props.rate} USDC
                 </span>
             </span>
         </div>
