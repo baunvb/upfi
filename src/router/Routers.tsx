@@ -38,12 +38,12 @@ export const Routers: Array<route> = [
         component: Farms,
         icon: <FaCubes size={SIZE}/>
     },
-    {
-        path: "/foundry",
-        name: "Foundry",
-        component: Foundry,
-        icon: <CurrencyDollar size={SIZE}/>
-    },
+    // {
+    //     path: "/foundry",
+    //     name: "Foundry",
+    //     component: Foundry,
+    //     icon: <CurrencyDollar size={SIZE}/>
+    // },
     {
         path: "/treasury",
         name: "Treasury",
@@ -53,7 +53,7 @@ export const Routers: Array<route> = [
     {
         path: "/document",
         redirect: true,
-        to: "https://google.com",
+        to: "https://docs.upfi.network",
         name: "Document",
         component: null,
         icon: <FileTextFill size={SIZE}/>,

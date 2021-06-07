@@ -38,7 +38,7 @@ export default function Header() {
                             >Change</button>
                         </div>
                         <span className="header-wallet-address">{formatShortWalletAddress(ConnectWalletState.myWalletAddress)}</span>
-                        <div className="header-wallet-copy">
+                        {/* <div className="header-wallet-copy">
                             <span style={{ display: "inline-block", marginRight: "20px" }}>
                                 <span className="header-wallet-icon-action"><FaCopy /></span>
                                 Copy
@@ -47,7 +47,7 @@ export default function Header() {
                                 <span  className="header-wallet-icon-action"><FaExternalLinkAlt /></span>
                                 View on BSC
                             </a>
-                        </div>
+                        </div> */}
                     </div>
                 </DialogComponent>
             }

@@ -4,7 +4,7 @@ import { GearFill } from 'react-bootstrap-icons';
 import "./mint.css"
 import Icon from "../../../assets/images/logo.png"
 import UPSLogo from "../../../assets/images/ups_logo.png"
-import BUSDLogo from "../../../assets/images/BUSD.webp"
+import USDCLogo from "../../../assets/images/usdc_logo.png"
 
 import Input from '../component/input/Input';
 import IcPlus from '../../../assets/images/ic_plus.png'
@@ -12,9 +12,9 @@ import IcResult from '../../../assets/images/ic_result.png'
 import Fee from '../component/fee/Fee';
 
 export default function Mint() {
-    const [valueBusd, setBusd] = useState(0)
+    const [sampleValue, setValue] = useState(0)
     const check = () => {
-        return valueBusd > 0
+        return sampleValue > 0
     }
     return (
         <Card>
@@ -29,34 +29,34 @@ export default function Mint() {
                 <Input
                     label="Input"
                     rate={95}
-                    value={valueBusd}
+                    value={sampleValue}
                     balance={100}
-                    icon={BUSDLogo}
-                    tokenName={"BUSD"}
-                    onMax={() => setBusd(100)}
-                    onChange={(value: any) => setBusd(value)}
+                    icon={USDCLogo}
+                    tokenName={"USDC"}
+                    onMax={() => setValue(100)}
+                    onChange={(value: any) => setValue(value)}
                 />
                 <img className="icon-swap" src={IcPlus} />
                 <Input
                     label="Input"
                     rate={5}
-                    value={valueBusd}
+                    value={sampleValue}
                     balance={100}
                     icon={UPSLogo}
                     tokenName={"UPS"}
-                    onMax={() => setBusd(100)}
-                    onChange={(value: any) => setBusd(value)}
+                    onMax={() => setValue(100)}
+                    onChange={(value: any) => setValue(value)}
                 />
                 <img className="icon-swap" src={IcResult} />
                 <Input
                     label="Output"
                     disabled
-                    value={valueBusd}
+                    value={sampleValue}
                     balance={11245}
                     icon={Icon}
                     tokenName={"UP"}
-                    onMax={() => setBusd(100)}
-                    onChange={(value: any) => setBusd(value)}
+                    onMax={() => setValue(100)}
+                    onChange={(value: any) => setValue(value)}
                 />
             </div>
             <button className={check() ? "mint-redeem-button-submit btn-active" : "mint-redeem-button-submit"}

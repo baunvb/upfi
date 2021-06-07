@@ -4,14 +4,14 @@ import { GearFill } from 'react-bootstrap-icons';
 import "./mint.css"
 import Icon from "../../../assets/images/logo.png"
 import UPSLogo from "../../../assets/images/ups_logo.png"
-import BUSDLogo from "../../../assets/images/BUSD.webp"
+import USDCLogo from "../../../assets/images/usdc_logo.png"
 import Input from '../component/input/Input';
 import IcPlus from '../../../assets/images/ic_plus.png'
 import IcResult from '../../../assets/images/ic_result.png'
 import Fee from '../component/fee/Fee';
 
 export default function Redeem() {
-    const [valueBusd, setBusd] = useState(0)
+    const [sampleValue, setSampleValue] = useState(0)
 
     return (
         <Card>
@@ -26,34 +26,34 @@ export default function Redeem() {
                 <Input
                     label="Input"
                     rate={60}
-                    value={valueBusd}
+                    value={sampleValue}
                     balance={100}
                     icon={Icon}
                     tokenName={"UP"}
-                    onMax={() => setBusd(100)}
-                    onChange={(value: any) => setBusd(value)}
+                    onMax={() => setSampleValue(100)}
+                    onChange={(value: any) => setSampleValue(value)}
                 />
                 <img className="icon-swap" src={IcPlus} />
                 <Input
                     label="Input"
                     rate={40}
-                    value={valueBusd}
+                    value={sampleValue}
                     balance={100}
                     icon={UPSLogo}
                     tokenName={"UPS"}
-                    onMax={() => setBusd(100)}
-                    onChange={(value: any) => setBusd(value)}
+                    onMax={() => setSampleValue(100)}
+                    onChange={(value: any) => setSampleValue(value)}
                 />
                 <img className="icon-swap" src={IcResult} />
                 <Input
                     label="Output"
                     disabled
-                    value={valueBusd}
+                    value={sampleValue}
                     balance={11500}
-                    icon={BUSDLogo}
-                    tokenName={"BUSD"}
-                    onMax={() => setBusd(100)}
-                    onChange={(value: any) => setBusd(value)}
+                    icon={USDCLogo}
+                    tokenName={"USDC"}
+                    onMax={() => setSampleValue(100)}
+                    onChange={(value: any) => setSampleValue(value)}
                 />
             </div>
             <button className="mint-redeem-button-submit"
