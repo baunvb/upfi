@@ -38,12 +38,12 @@ export const Routers: Array<route> = [
         component: Farms,
         icon: <FaCubes size={SIZE}/>
     },
-    // {
-    //     path: "/foundry",
-    //     name: "Staking",
-    //     component: Foundry,
-    //     icon: <CurrencyDollar size={SIZE}/>
-    // },
+    {
+        path: "/staking",
+        name: "Staking",
+        component: Foundry,
+        icon: <CurrencyDollar size={SIZE}/>
+    },
     {
         path: "/treasury",
         name: "Treasury",

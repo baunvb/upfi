@@ -11,6 +11,7 @@
 }
 .mint-setting {
     position: absolute;
+    cursor: pointer;
     right: 0;
 }
 .icon-swap {
@@ -19,4 +20,36 @@
 }
 .mint-swap {
     text-align: center;
+}
+.mint-ul-slippage {
+    margin-top: 10px;
+    list-style-type: none;
+}
+.mint-ul-slippage > li{
+    text-align: center;
+    width: 60px;
+    padding-top: 4px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(64, 68, 79);    
+    margin: 4px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.mint-ul-slippage > li:hover{
+    background: linear-gradient(93.87deg, #F6AA17 -5.07%, #B050DA 98.15%);
+}
+.mint-slippage-input {
+    background: none;
+    height: 100%;
+    color: #fff;;
+    border: none;
+    outline: none;
+    width: 100%;
 }

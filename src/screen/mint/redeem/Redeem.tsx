@@ -17,9 +17,6 @@ export default function Redeem() {
         <Card>
             <div className="mint-header">
                 <span>REDEEM</span>
-                <div className="mint-setting">
-                    <GearFill size={20} />
-                </div>
             </div>
 
             <div className="mint-swap">

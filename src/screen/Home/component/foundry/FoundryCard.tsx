@@ -25,9 +25,9 @@ export default function FoundryCard(props: any) {
 
         <Card>
             <NavLink className="foundry-card"
-                to="/foundry"
+                to="/staking"
             >
-                <span className="label">Foundry</span>
+                <span className="label">Staking</span>
 
                 <span className="value">
                     <Countdown 
@@ -36,7 +36,7 @@ export default function FoundryCard(props: any) {
                     />
                 </span>
                 <span className="label">next epoch</span>
-                <span className="label-white">Go to Foundry</span>
+                <span className="label-white">Go to Staking</span>
             </NavLink>
         </Card>
 
