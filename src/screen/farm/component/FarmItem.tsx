@@ -67,7 +67,7 @@ const FarmItemDetail: React.FC<{}> = () => {
                 <div className="farm-item-detail-card">
                     <span className="farm-item-detail-label">Earned</span>
                     <span className="farm-item-detail-value">{formatCurrency(12035035.33)}</span>
-                    <span className="farm-item-detail-token">USDT</span>
+                    <span className="farm-item-detail-token">USDC</span>
                     <div className="farm-item-detail-action">
                         <button className="farm-item-detail-btn-claim btn-active">Claim Rewards</button>
                     </div>
@@ -98,7 +98,7 @@ const FarmItem: React.FC<{}> = () => {
                         </span>
                         <span className="name">
                             <span className="farm-item-title">UP-UPS</span>
-                            <span className="farm-item-earn">Earn USDT</span>
+                            <span className="farm-item-earn">Earn USDC</span>
                         </span>
                     </div>
                     <div>
