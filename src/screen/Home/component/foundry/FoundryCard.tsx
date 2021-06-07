@@ -7,20 +7,14 @@ const COUNT_DOWN_TIME = 20 * 24 * 60 * 60 * 1000 //20days
 export default function FoundryCard(props: any) {
     const CountDownComponent = (props: any) => {
         const { days, hours, minutes, seconds, completed } = props;
-        var dayStr = "day"
-        if(days <= 1) {
-            dayStr = "day"
+        if (days == 0) {
+            return <span>{hours}:{minutes}:{seconds}</span>;
+        } else if (days > 1) {
+            return <span>{days} days, {hours}:{minutes}:{seconds}</span>;
+        } else {
+            return <span>{days} day, {hours}:{minutes}:{seconds}</span>;
         }
-        if(days > 1) {
-            dayStr = "days"
-        }
-        if (completed) {
-            return null
-          } else {
-            return <span>{days} {dayStr}, {hours}:{minutes}:{seconds}</span>;
-          }
     }
-
     return (
 
         <Card>

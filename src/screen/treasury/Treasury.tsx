@@ -141,7 +141,7 @@ export default function Treasury(props: any) {
     }, [])
     return (
         <div className="treasury">
-            <span className="treasury-header">UTK TREASURY</span>
+            <span className="treasury-header">UP TREASURY</span>
             <div className="treasury-content">
                 <div>
                     <span className="treasury-subheader">Status</span>

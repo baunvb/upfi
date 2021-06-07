@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from "../screen/Home/Home"
 import { CurrencyExchange, HouseFill, CurrencyDollar, FileTextFill, Coin } from 'react-bootstrap-icons';
-import { FaCubes, FaExchangeAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCubes, FaExchangeAlt, FaExternalLinkAlt, FaHandHoldingUsd } from 'react-icons/fa';
 
 import MintAndRedeem from "../screen/mint/MintAndRedeem";
 import Farms from "../screen/farm/Farms";
@@ -24,31 +24,31 @@ export const Routers: Array<route> = [
         path: "/",
         name: "Home",
         component: Home,
-        icon: <HouseFill size={SIZE}/> 
+        icon: <HouseFill size={SIZE} />
     },
     {
         path: "/mint-redeem",
         name: "MINT / REDEEM",
         component: MintAndRedeem,
-        icon: <FaExchangeAlt size={SIZE}/>
+        icon: <FaExchangeAlt size={SIZE} />
     },
     {
         path: "/farms",
         name: "Farms",
         component: Farms,
-        icon: <FaCubes size={SIZE}/>
+        icon: <FaCubes size={SIZE} />
     },
     {
         path: "/staking",
         name: "Staking",
         component: Foundry,
-        icon: <CurrencyDollar size={SIZE}/>
+        icon: <CurrencyDollar size={SIZE} />
     },
     {
         path: "/treasury",
         name: "Treasury",
         component: Treasury,
-        icon: <CurrencyDollar size={SIZE}/>
+        icon: <FaHandHoldingUsd size={SIZE} />
     },
     {
         path: "/document",
@@ -56,7 +56,7 @@ export const Routers: Array<route> = [
         to: "https://docs.upfi.network",
         name: "Document",
         component: null,
-        icon: <FileTextFill size={SIZE}/>,
-        subIcon: <FaExternalLinkAlt size={10}/>
+        icon: <FileTextFill size={SIZE} />,
+        subIcon: <FaExternalLinkAlt size={10} />
     }
 ]
