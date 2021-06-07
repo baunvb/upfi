@@ -25,7 +25,6 @@ export default function Redeem() {
             <div className="mint-swap">
                 <Input
                     label="Input"
-                    rate={60}
                     value={sampleValue}
                     balance={100}
                     icon={Icon}
@@ -33,21 +32,12 @@ export default function Redeem() {
                     onMax={() => setSampleValue(100)}
                     onChange={(value: any) => setSampleValue(value)}
                 />
-                <img className="icon-swap" src={IcPlus} />
-                <Input
-                    label="Input"
-                    rate={40}
-                    value={sampleValue}
-                    balance={100}
-                    icon={UPSLogo}
-                    tokenName={"UPS"}
-                    onMax={() => setSampleValue(100)}
-                    onChange={(value: any) => setSampleValue(value)}
-                />
                 <img className="icon-swap" src={IcResult} />
+
                 <Input
-                    label="Output"
                     disabled
+                    rate={5}
+                    label="Output"
                     value={sampleValue}
                     balance={11500}
                     icon={USDCLogo}
@@ -55,9 +45,22 @@ export default function Redeem() {
                     onMax={() => setSampleValue(100)}
                     onChange={(value: any) => setSampleValue(value)}
                 />
+                <img className="icon-swap" src={IcPlus} />
+
+                <Input
+                    disabled
+                    label="Input"
+                    rate={95}
+                    value={sampleValue}
+                    balance={100}
+                    icon={UPSLogo}
+                    tokenName={"UPS"}
+                    onMax={() => setSampleValue(100)}
+                    onChange={(value: any) => setSampleValue(value)}
+                />
             </div>
             <button className="mint-redeem-button-submit"
-                onClick={() => {}}
+                onClick={() => { }}
             >
                 Approve to REDEEM
             </button>
