@@ -6,11 +6,13 @@ import { connectWallet, disConnectWallet, getWalletAddress } from '../../data/ac
 import { formatShortWalletAddress } from '../../utils/Util'
 import DialogComponent from '../dialog/Dialog'
 import { FaCopy, FaExternalLinkAlt } from 'react-icons/fa';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export default function Header() {
     const dispatch = useDispatch();
     const ConnectWalletState = useSelector(state => state.WalletReducer)
     const [open, setOpen] = useState(false)
+    const [copyTooltip, setCopyToolTip] = useState("Copy")
     const [openAccount, setOpenAccount] = useState(false)
 
     useEffect(() => {
@@ -38,16 +40,26 @@ export default function Header() {
                             >Change</button>
                         </div>
                         <span className="header-wallet-address">{formatShortWalletAddress(ConnectWalletState.myWalletAddress)}</span>
-                        {/* <div className="header-wallet-copy">
-                            <span style={{ display: "inline-block", marginRight: "20px" }}>
-                                <span className="header-wallet-icon-action"><FaCopy /></span>
+                        <div className="header-wallet-copy">
+                            <Tooltip title={copyTooltip}>
+                                <span style={{ display: "inline-block", marginRight: "20px" }}
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(ConnectWalletState.myWalletAddress)
+                                        setCopyToolTip("Copied")
+                                    }}
+                                    onMouseLeave={() => setCopyToolTip("Copy")
+                                    }
+                                >
+                                    <span className="header-wallet-icon-action"><FaCopy /></span>
                                 Copy
                             </span>
-                            <a>
-                                <span  className="header-wallet-icon-action"><FaExternalLinkAlt /></span>
-                                View on BSC
+                            </Tooltip>
+
+                            <a className="header-wallet-icon-action" href={"https://etherscan.io/address/" + ConnectWalletState.myWalletAddress} target="_blank">
+                                <span className="header-wallet-icon-action"><FaExternalLinkAlt /></span>
+                                View on Etherscan
                             </a>
-                        </div> */}
+                        </div>
                     </div>
                 </DialogComponent>
             }

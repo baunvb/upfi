@@ -71,6 +71,7 @@
 .header-wallet-icon-action {
     margin-right: 4px;
     margin-bottom: -3px;
+    color: rgb(108, 114, 132);
 }
 @media only screen 
   and (min-device-width: 320px) 

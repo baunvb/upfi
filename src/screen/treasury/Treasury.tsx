@@ -83,7 +83,7 @@ export default function Treasury(props: any) {
         {
             Header: "Tx",
             accessor: "tx",
-            Cell: (row: any) => <a className="treasury-table-tx" href={"https://bscscan.com/tx/" + row.value} target="_blank">
+            Cell: (row: any) => <a className="treasury-table-tx" href={"https://etherscan.io/tx/" + row.value} target="_blank">
                 <span>{row.value}</span>
                 <span className="treasury-tx-external-link">
                     <FaExternalLinkAlt size={10}/>

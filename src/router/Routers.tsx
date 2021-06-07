@@ -40,7 +40,7 @@ export const Routers: Array<route> = [
     },
     // {
     //     path: "/foundry",
-    //     name: "Foundry",
+    //     name: "Staking",
     //     component: Foundry,
     //     icon: <CurrencyDollar size={SIZE}/>
     // },
