@@ -24,6 +24,7 @@
 .mint-ul-slippage {
     margin-top: 10px;
     list-style-type: none;
+    padding: 0;
 }
 .mint-ul-slippage > li{
     text-align: center;
